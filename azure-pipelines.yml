@@ -1,5 +1,10 @@
-pool: Default
+pool:
+  name: Default
+
 steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
 - bash: echo hello world
 - task: DotNetCoreCLI@2
   inputs:
